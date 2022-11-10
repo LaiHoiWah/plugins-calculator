@@ -20,17 +20,13 @@ public class BubbleSort{
         for(int i = 1; i < array.length; i++){
             for(int j = 0; j < array.length - 1; j++){
                 if(Direction.ASC.equals(direction) ? (array[j] > array[j + 1]) : (array[j] < array[j + 1])){
-                    swap(array, j);
+                    int temp = array[j + 1];
+
+                    // swap positions
+                    array[j + 1] = array[j];
+                    array[j]     = temp;
                 }
             }
         }
-    }
-
-    private static void swap(int[] array, int index){
-        int temp = array[index + 1];
-
-        // swap positions
-        array[index + 1] = array[index];
-        array[index]     = temp;
     }
 }
