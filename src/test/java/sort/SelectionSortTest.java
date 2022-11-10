@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class SelectionSortTest{
 
-    public int[] array = {5,20, 1, 0, 9, 25, 77, 14, 5};
+    public int[] array = {5, 20, 1, 0, 9, 25, 77, 14, 5};
 
     @Test
     public void byAscending(){

@@ -1,4 +1,4 @@
-package com.meowu.plugins.calculator.sort;
+package com.meowu.plugins.calculator.sort.constants;
 
 public enum Direction{
 

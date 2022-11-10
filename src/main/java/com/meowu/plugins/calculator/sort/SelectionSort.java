@@ -1,6 +1,7 @@
 package com.meowu.plugins.calculator.sort;
 
 import com.meowu.commons.utils.AssertUtils;
+import com.meowu.plugins.calculator.sort.constants.Direction;
 
 public class SelectionSort{
 
@@ -20,19 +21,8 @@ public class SelectionSort{
             int index = i;
 
             for(int j = i + 1; j < array.length; j++){
-                switch(direction){
-                    case ASC:
-                        if(array[j] < array[index])
-                            swap(array, j, index);
-                        break;
-
-                    case DESC:
-                        if(array[j] > array[index])
-                            swap(array, j, index);
-                        break;
-
-                    default:
-                        break;
+                if(Direction.ASC.equals(direction) ? (array[j] < array[index]) : (array[j] > array[index])){
+                    swap(array, j, index);
                 }
             }
         }
